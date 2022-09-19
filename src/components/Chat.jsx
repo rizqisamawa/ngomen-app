@@ -3,12 +3,15 @@ import Add from "../images/add.png";
 import More from "../images/more.png";
 import Messages from "./Messages.jsx";
 import Input from "./Input.jsx";
+import { ChatContext } from "../context/ChatContext";
+import { useContext } from "react";
 
 const Chat = () => {
+  const { data } = useContext(ChatContext);
   return (
     <div className="flex-[2]">
       <div className="chatInfo h-[50px] bg-pink-600 flex items-center justify-between p-[10px] text-gray-50 font-thin">
-        <span>Maun</span>
+        <span>{data.user?.displayName}</span>
         <div className="chaticon flex gap-[10px]">
           <img src={Cam} alt="" className="h-6 cursor-pointer" />
           <img src={Add} alt="" className="h-6 cursor-pointer" />
