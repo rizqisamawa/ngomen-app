@@ -48,7 +48,7 @@ const Chats = () => {
                 {chat[1].userInfo.displayName}
               </span>
               <p className="text-sm text-gray-50">
-                {chat[1].userInfo.lastMessage?.text}
+                {chat[1].lastMessage?.text}
               </p>
             </div>
           </div>
